@@ -1,3 +1,5 @@
+import broj from "./broj.json" with { type: "json" };
+
 async function getData() {
   const url = "data.json";
   try {
@@ -15,12 +17,13 @@ try{
     const res = await getData();
 
 
-let test = ""
+let text = ""
 res.days.forEach(item => {
         text += `<div class="day">
                    <strong>${item.date_fa}</strong> — ${item.weekday}
                    <span class="sign">🜂 ${item.sign}</span>
-                 </div>`;
+                   <p>${broj[item.sign] ?? "توضیح این برج هنوز نوشته نشده"}</p>
+                 </div>` ;
       });
       document.getElementById("x").innerHTML = text;   // ← این خط جدید، نمایش میده
 } catch(error){
