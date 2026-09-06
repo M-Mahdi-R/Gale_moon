@@ -30,6 +30,6 @@ res.days.forEach(item => {
     document.getElementById("x").textContent = "دیتا در دسترس نیست: " + error.message;
 }
 
-/////////////////////////////////////////////
+
 
     
