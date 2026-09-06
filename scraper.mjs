@@ -118,7 +118,7 @@ try {
     .map(k => { const [y, m] = k.split("-").map(Number); return { y, m }; });
   console.log("ماه‌های لازم:", needed.map(n => `${n.y}-${n.m}`).join(" , "));
 
- await openWithRetry(page, "https://mooncalendar.astro-seek.com/");
+ await openWithRetry(page, "https://mooncalendar.astro-seek.com/?narozeni_city=Tīrān%2C+Iran&narozeni_input_hidden=&narozeni_hidden_local_tz=1&narozeni_stat_hidden=IR&narozeni_podstat_hidden=Isfahan&narozeni_podstat_kratky_hidden=&narozeni_podstat2_kratky_hidden=&narozeni_tzid_id=273&narozeni_mesto_hidden=Tīrān&narozeni_den=06&narozeni_mesic=09&narozeni_rok=2026&tolerance=1&narozeni_sirka_stupne=32&narozeni_sirka_minuty=42&narozeni_sirka_smer=0&narozeni_delka_stupne=51&narozeni_delka_minuty=9&narozeni_delka_smer=0#select_local_tz_anchor");
   const allLinks = await page.evaluate(() =>
     [...document.querySelectorAll("a[href]")].map(a => a.href)
   );
