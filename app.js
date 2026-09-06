@@ -1,7 +1,7 @@
-import broj from "./broj.json" with { type: "json" };
+import broj from "../broj.json" with { type: "json" };
 
 async function getData() {
-  const url = "data.json";
+  const url = "../data.json";
   try {
     const response = await fetch(url);
     if (!response.ok) {
