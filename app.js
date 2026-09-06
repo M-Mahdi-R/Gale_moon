@@ -30,4 +30,13 @@ res.days.forEach(item => {
     document.getElementById("x").textContent = "دیتا در دسترس نیست: " + error.message;
 }
 
+/////////////////////////////////////////////
+
+function router() {
+  const route = location.hash.slice(2);   // "#/m" → "m"
+  if (route === "m") page.textContent = "سلام";
+  else page.textContent = "صفحه اصلی";
+}
+window.addEventListener("hashchange", router);
+router();  
     
