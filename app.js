@@ -1,18 +1,11 @@
 import broj from "./broj.json" with { type: "json" };
 
 async function getData() {
-  const url = "data.json";
-  try {
-    const response = await fetch(url);
-    if (!response.ok) {
-      throw new Error(`Response status: ${response.status}`);
-    }
-    
-    return response.json();
-  } catch (error) {
-    console.error(error.message);
-  }
+  const response = await fetch(`data.json?v=${Date.now()}`); // ?v → کش رو می‌شکنه
+  if (!response.ok) throw new Error(`Response status: ${response.status}`);
+  return response.json();
 }
+  
 try{
     const res = await getData();
 
