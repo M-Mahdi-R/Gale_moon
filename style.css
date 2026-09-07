@@ -1,0 +1,102 @@
+:root {
+  --bg: #0b1026;
+  --bg2: #141b3d;
+  --card: rgba(255, 255, 255, 0.07);
+  --card-border: rgba(255, 255, 255, 0.12);
+  --text: #e8e8f0;
+  --muted: #9aa0c3;
+  --accent: #ffd166;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: "Vazirmatn", system-ui, sans-serif;
+  background: radial-gradient(1200px 800px at 70% -10%, var(--bg2), var(--bg));
+  color: var(--text);
+  min-height: 100vh;
+}
+
+/* ستاره‌ها — یه کاشی کوچیک که تکرار میشه */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background-image:
+    radial-gradient(1px 1px at 25px 35px, #fff, transparent),
+    radial-gradient(1px 1px at 110px 80px, rgba(255,255,255,.7), transparent),
+    radial-gradient(1.5px 1.5px at 190px 150px, rgba(255,255,255,.9), transparent),
+    radial-gradient(1px 1px at 230px 45px, rgba(255,255,255,.5), transparent),
+    radial-gradient(1px 1px at 60px 200px, rgba(255,255,255,.6), transparent);
+  background-size: 260px 260px;
+  opacity: .45;
+  pointer-events: none;
+}
+
+.site-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1.5rem;
+  border-bottom: 1px solid var(--card-border);
+  backdrop-filter: blur(8px);
+}
+.brand { color: var(--text); text-decoration: none; font-weight: 700; font-size: 1.1rem; }
+.site-header nav a {
+  color: var(--muted);
+  text-decoration: none;
+  margin-inline-start: 1.2rem;
+  transition: color .2s;
+}
+.site-header nav a:hover { color: var(--accent); }
+
+main { max-width: 720px; margin: 0 auto; padding: 2rem 1rem; }
+
+.main-card {
+  background: var(--card);
+  border: 1px solid var(--card-border);
+  border-radius: 20px;
+  padding: 2rem;
+  backdrop-filter: blur(8px);
+  box-shadow: 0 10px 40px rgba(0,0,0,.35);
+}
+.main-top { display: flex; justify-content: space-between; align-items: flex-start; }
+.main-date { font-size: 1.7rem; font-weight: 700; }
+.main-weekday { color: var(--muted); margin-top: .2rem; }
+.main-phase { font-size: 3.5rem; line-height: 1; }
+.main-sign { color: var(--accent); margin: 1.2rem 0 .6rem; font-size: 1.25rem; }
+.main-desc { line-height: 2; color: #d7daf0; }
+
+.days-strip {
+  display: flex;
+  gap: .6rem;
+  margin-top: 1.2rem;
+  overflow-x: auto;
+  padding-bottom: .5rem;
+}
+.day-card {
+  flex: 0 0 auto;
+  min-width: 100px;
+  background: var(--card);
+  border: 1px solid var(--card-border);
+  border-radius: 14px;
+  padding: .7rem 1rem;
+  color: var(--text);
+  font-family: inherit;
+  font-size: .9rem;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: .2rem;
+  transition: border-color .2s, background .2s;
+}
+.day-card:hover { border-color: var(--accent); }
+.day-card.active {
+  background: rgba(255, 209, 102, .14);
+  border-color: var(--accent);
+}
+.day-card-weekday { font-size: .8rem; color: var(--muted); }
+.day-card.active .day-card-weekday { color: var(--accent); }
+
+.error { color: #ff9b9b; }
