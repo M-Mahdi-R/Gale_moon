@@ -1,54 +1,260 @@
 <!DOCTYPE html>
 <html lang="fa" dir="rtl">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>موقعیت ماه</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌙</text></svg>">
+<link href="https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/Vazirmatn-font-face.css" rel="stylesheet">
+<style>
+:root {
+  --text: #eef0ff; --muted: #8f96c4; --gold: #ffd166;
+  --fire: #ff6b45; --earth: #4ade80; --water: #38bdf8; --air: #a5c8ff;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
 
-  <meta
-    name="description"
-    content="وضعیت ماه و برج آن را برای روزهای پیش رو مشاهده کنید."
-  >
+body {
+  font-family: "Vazirmatn", system-ui, sans-serif;
+  color: var(--text); min-height: 100vh;
+  background: linear-gradient(180deg, #03050d 0%, #070b1c 38%, #0e1433 72%, #1a2048 100%);
+  overflow-x: hidden;
+}
 
-  <title>ماه کجاست؟</title>
+.nebula { position: fixed; inset: 0; z-index: 0; pointer-events: none; }
+.nebula::before, .nebula::after { content: ""; position: absolute; border-radius: 50%; filter: blur(70px); }
+.nebula::before { width: 60vw; height: 34vh; top: -6%; right: -10%;
+  background: radial-gradient(ellipse, rgba(110,90,255,.12), transparent 65%);
+  animation: nebA 26s ease-in-out infinite alternate; }
+.nebula::after { width: 50vw; height: 30vh; bottom: 4%; left: -8%;
+  background: radial-gradient(ellipse, rgba(60,130,255,.1), transparent 65%);
+  animation: nebA 32s ease-in-out 6s infinite alternate-reverse; }
+@keyframes nebA { from { opacity: .5; transform: translateX(0) scale(1); }
+                  to { opacity: .9; transform: translateX(-4vw) scale(1.08); } }
 
-  <link
-    rel="icon"
-    href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌙</text></svg>"
-  >
+.sky { position: fixed; inset: 0; z-index: 0; pointer-events: none; }
+.sky .layer { position: absolute; inset: -20%; background-repeat: repeat; animation: drift 170s linear infinite; }
+.sky .l1 { background-image:
+  radial-gradient(1px 1px at 22px 44px, #fff, transparent),
+  radial-gradient(1px 1px at 130px 90px, rgba(210,220,255,.55), transparent),
+  radial-gradient(1px 1px at 240px 190px, rgba(255,255,255,.35), transparent);
+  background-size: 300px 300px; opacity: .5; }
+.sky .l2 { background-image:
+  radial-gradient(1.3px 1.3px at 60px 120px, rgba(255,255,255,.9), transparent),
+  radial-gradient(1.3px 1.3px at 200px 40px, rgba(190,210,255,.8), transparent);
+  background-size: 410px 410px; opacity: .6; animation-duration: 250s; animation-direction: reverse; }
+.sky .l3 { background-image:
+  radial-gradient(1.8px 1.8px at 150px 150px, rgba(255,246,220,.95), transparent),
+  radial-gradient(1.5px 1.5px at 420px 90px, rgba(170,200,255,.9), transparent);
+  background-size: 560px 560px; opacity: .8; animation-duration: 320s; }
+@keyframes drift { to { transform: translateX(-20%); } }
 
-  <link
-    href="https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/Vazirmatn-font-face.css"
-    rel="stylesheet"
-  >
+.bstar { position: fixed; z-index: 0; pointer-events: none; width: 4px; height: 4px;
+  border-radius: 50%; background: #fff; box-shadow: 0 0 8px 2px rgba(255,255,255,.55);
+  animation: bigTw var(--d,3s) ease-in-out var(--dl,0s) infinite alternate; }
+.bstar::before, .bstar::after { content: ""; position: absolute; top: 50%; left: 50%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,.9), transparent);
+  transform: translate(-50%,-50%); }
+.bstar::before { width: 22px; height: 1px; }
+.bstar::after  { width: 1px; height: 22px; }
+@keyframes bigTw { from { opacity: .25; transform: scale(.7); } to { opacity: 1; transform: scale(1.15); } }
 
-  <link rel="stylesheet" href="style.css">
+.meteor { position: fixed; width: 190px; height: 1.6px; z-index: 0; pointer-events: none;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,.95) 60%, #fff);
+  border-radius: 99px; opacity: 0; filter: drop-shadow(0 0 6px rgba(255,255,255,.6)); }
+.m1 { top: 9%;  left: 74%; animation: shoot 10s linear 2.5s infinite; }
+.m2 { top: 18%; left: 20%; animation: shoot 14s linear 7s infinite; }
+.m3 { top: 28%; left: 55%; animation: shoot 17s linear 12s infinite; }
+@keyframes shoot {
+  0% { opacity: 0; transform: rotate(-30deg) translateX(0); } 2% { opacity: 1; }
+  10% { opacity: 0; transform: rotate(-30deg) translateX(-58vw); } 100% { opacity: 0; } }
+
+header.site { position: relative; z-index: 2; display: flex; justify-content: space-between;
+  align-items: center; padding: .5rem 1.4rem; }
+.brand { display: flex; align-items: center; gap: .55rem;
+  color: var(--text); text-decoration: none; font-weight: 700; }
+.brand .moon-ic {
+  width: 34px; height: 34px; border-radius: 10px; display: grid; place-items: center;
+  background: linear-gradient(160deg, rgba(255,235,170,.14), rgba(255,235,170,.03));
+  border: 1px solid rgba(255,224,150,.3);
+  box-shadow: 0 0 12px rgba(255,224,150,.18);
+  font-size: 1.05rem;
+}
+.brand .t-en { letter-spacing: .12em; font-size: 1.02rem; direction: ltr; }
+.brand .t-fa { color: var(--muted); font-size: .82rem; font-weight: 600; }
+.site-header nav a { color: var(--muted); text-decoration: none; font-size: .85rem; transition: color .2s; }
+.site-header nav a:hover { color: var(--gold); }
+
+main { position: relative; z-index: 1; max-width: 980px; margin: 0 auto; padding: 0 .5rem .7rem; }
+
+.scene-svg { display: block; width: 100%; height: auto; }
+
+.ring { fill: none; stroke: rgba(255,255,255,.3); stroke-width: 2; }
+.ring.faint { stroke: rgba(255,255,255,.09); stroke-width: 1; }
+.dust { fill: none; stroke: rgba(255,224,150,.16); stroke-width: 1; }
+.divider { stroke: rgba(255,255,255,.32); stroke-width: 2.2; stroke-linecap: round; }
+.bdot { fill: rgba(255,209,102,.7); }
+
+.g { transition: opacity .6s ease, filter .6s ease; }
+.g.dim { opacity: .28; filter: blur(2.2px); }
+.g.on { filter: drop-shadow(0 0 14px rgba(255,209,102,.3)); }
+.g .z-name { font-size: 21px; font-weight: 800; fill: #7b82b5; transition: fill .5s; }
+.g .z-name .sym { font-size: 23px; }
+.g .z-name .en { font-size: 13px; letter-spacing: .15em; font-weight: 700; }
+.g.on .z-name { fill: var(--gold); }
+.g .cline { stroke: rgba(255,224,150,.5); stroke-width: .55; stroke-dasharray: 2.5 2; animation: dash 26s linear infinite; }
+.g .cstar { fill: #fff6dd; animation: ctw 2.6s ease-in-out infinite alternate; }
+.g .chalo { fill: rgba(255,227,163,.15); }
+@keyframes dash { to { stroke-dashoffset: -300; } }
+@keyframes ctw { from { opacity: .4; } to { opacity: 1; } }
+.g.has-days { cursor: pointer; }
+
+/* خزش ماه: ریز-جابه‌جایی روزانه روی قوس بین برج‌ها */
+.moon-g { transition: transform 1.1s cubic-bezier(.35,.85,.3,1); }
+.creep { fill: var(--gold); opacity: .8;
+  animation: creepTw 2.2s ease-in-out infinite alternate; }
+@keyframes creepTw { from { opacity: .35; } to { opacity: .95; } }
+.halo { animation: haloB 5s ease-in-out infinite alternate; }
+@keyframes haloB { from { opacity: .5; } to { opacity: .85; } }
+.moon-g .zoomer { transform-box: fill-box; transform-origin: center;
+  animation: zoomBack .9s cubic-bezier(.34,1.4,.4,1) both; }
+@keyframes zoomBack {
+  0%   { transform: scale(.72); }
+  55%  { transform: scale(1.12); }
+  100% { transform: scale(1); }
+}
+
+/* ---------- بخش متن ---------- */
+.info { text-align: center; margin-top: .15rem; }
+.info.swap { animation: infoIn .5s ease both; }
+@keyframes infoIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+.sign-badge-row { display: flex; justify-content: center; align-items: center; gap: .7rem; margin-bottom: .3rem; }
+.sym-box {
+  width: 44px; height: 44px; border-radius: 12px;
+  display: grid; place-items: center; font-size: 24px;
+  background: linear-gradient(160deg, rgba(255,255,255,.09), rgba(255,255,255,.03));
+  border: 1.5px solid var(--el-color, var(--gold));
+  box-shadow: 0 0 14px var(--el-glow, rgba(255,209,102,.25)), inset 0 0 10px rgba(255,255,255,.04);
+  transition: border-color .6s, box-shadow .6s;
+}
+.sign-name { font-size: 1.25rem; font-weight: 800; color: var(--el-color, var(--gold));
+  text-shadow: 0 0 18px var(--el-glow, rgba(255,209,102,.3)); transition: color .6s, text-shadow .6s; }
+.sign-sub { font-size: .74rem; color: var(--muted); letter-spacing: .1em; margin-top: .1rem; }
+.date-line { display: flex; justify-content: center; align-items: baseline; gap: .8rem; }
+.date-big { font-size: 1.15rem; font-weight: 800; }
+.greg { color: var(--muted); font-size: .75rem; direction: ltr; }
+.weekday { color: var(--muted); font-size: .8rem; }
+.desc { max-width: 620px; margin: .35rem auto 0; line-height: 1.95; color: #d6d9f2; font-size: .86rem;
+  display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+
+/* ---------- ریسورس‌ها ---------- */
+.res-wrap { position: relative; max-width: 980px; margin: 0 auto; padding: 0 .6rem .2rem;
+  display: flex; justify-content: flex-start; }
+.res-btn {
+  width: 36px; height: 36px; border-radius: 10px;
+  display: grid; place-items: center;
+  background: rgba(255,255,255,.06);
+  border: 1px solid rgba(255,255,255,.14);
+  color: var(--muted); font-size: .95rem; font-family: inherit;
+  cursor: pointer; transition: all .25s;
+}
+.res-wrap:hover .res-btn { border-color: var(--gold); color: var(--gold);
+  box-shadow: 0 0 12px rgba(255,209,102,.2); }
+.res-pop {
+  position: absolute; bottom: calc(100% - 2px); inset-inline-start: .6rem;
+  min-width: 260px; z-index: 6;
+  background: rgba(14,19,45,.95);
+  border: 1px solid rgba(255,255,255,.15);
+  border-radius: 14px; padding: .7rem .7rem;
+  backdrop-filter: blur(12px);
+  box-shadow: 0 12px 34px rgba(0,0,0,.5);
+  opacity: 0; transform: translateY(6px); pointer-events: none;
+  transition: opacity .22s ease, transform .22s ease;
+}
+.res-wrap:hover .res-pop { opacity: 1; transform: translateY(0); pointer-events: auto; }
+.res-pop a {
+  display: flex; align-items: center; gap: .6rem;
+  padding: .5rem .6rem; border-radius: 10px;
+  color: var(--text); text-decoration: none; font-size: .87rem;
+  transition: background .2s;
+}
+.res-pop a:hover { background: rgba(255,209,102,.1); }
+.res-pop a .ic { font-size: 1.15rem; }
+.res-pop a small { color: var(--muted); font-size: .7rem; margin-inline-start: auto; }
+
+/* ---------- خط زمانی ---------- */
+.timeline { margin-top: .2rem; }
+.timeline-track { display: flex; overflow-x: auto; padding: .5rem .2rem .3rem; scrollbar-width: none; }
+.timeline-track::-webkit-scrollbar { display: none; }
+.t-dot { flex: 1 0 80px; background: none; border: none; color: var(--text); font-family: inherit;
+  cursor: pointer; display: flex; flex-direction: column; align-items: center; gap: .25rem;
+  padding: .25rem 0; position: relative; }
+.t-dot::before { content: ""; position: absolute; top: 36px; height: 2px; width: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,.2), transparent); }
+.t-dot:first-child::before { inset-inline-start: 50%; width: 50%; }
+.t-dot:last-child::before { inset-inline-end: 50%; width: 50%; }
+.t-dot .dot { width: 10px; height: 10px; border-radius: 50%; z-index: 1;
+  background: #39406e; border: 2px solid rgba(255,255,255,.25); transition: all .25s; }
+.t-dot.active .dot { background: var(--gold); border-color: transparent;
+  box-shadow: 0 0 0 4px rgba(255,209,102,.16), 0 0 14px var(--gold);
+  animation: dotPop .35s cubic-bezier(.3,1.4,.5,1); }
+@keyframes dotPop { 0% { transform: scale(.6); } 60% { transform: scale(1.35); } 100% { transform: scale(1); } }
+.t-dot .wd { font-size: .72rem; color: var(--muted); }
+.t-dot.active .wd { color: var(--gold); }
+.t-dot .mini { line-height: 0; transition: transform .25s; }
+.t-dot.active .mini { transform: scale(1.15); }
+.t-dot .mini svg { width: 28px; height: 28px; }
+
+.loader { text-align: center; padding: 3rem 0; color: var(--muted); font-size: .9rem; }
+.error { color: #ff9b9b; text-align: center; padding: 2rem 0; }
+
+@media (max-width: 560px) {
+  .date-big { font-size: 1rem; } .desc { font-size: .8rem; }
+  .sym-box { width: 38px; height: 38px; font-size: 20px; }
+}
+</style>
 </head>
-
 <body>
 
-  <header class="site-header">
-    <a class="brand" href="#/">
-      <span class="brand-icon">☾</span>
-      <span>ماه کجاست؟</span>
-    </a>
+<div class="nebula"></div>
+<div class="sky"><div class="layer l1"></div><div class="layer l2"></div><div class="layer l3"></div></div>
+<div class="bstar" style="top:12%; left:18%; --d:2.6s"></div>
+<div class="bstar" style="top:22%; left:78%; --d:3.4s; --dl:1s"></div>
+<div class="bstar" style="top:6%;  left:45%; --d:4s;   --dl:2s"></div>
+<div class="bstar" style="top:34%; left:60%; --d:3s;   --dl:.5s"></div>
+<div class="bstar" style="top:40%; left:8%;  --d:3.8s; --dl:1.6s"></div>
+<div class="meteor m1"></div>
+<div class="meteor m2"></div>
+<div class="meteor m3"></div>
 
-    <nav class="site-nav">
-      <a href="old/">نسخه‌ی قدیم</a>
-    </nav>
-  </header>
+<header class="site">
+  <a class="brand" href="./">
+    <span class="moon-ic">🌙</span>
+    <span class="t-en">Moon isto</span>
+    <span class="t-fa">موقعیت ماه</span>
+  </a>
+  <nav><a href="old/">نسخه‌ی قدیم</a></nav>
+</header>
 
-  <main id="app">
-    <section id="main-card" class="main-card"></section>
-    <section id="days-strip" class="days-strip"></section>
-  </main>
+<main>
+  <svg class="scene-svg" id="scene" viewBox="0 260 980 640"></svg>
+  <div class="loader" id="loader">در حال چیدن ستاره‌ها…</div>
+  <div class="info" id="info"></div>
 
-  <footer class="site-footer">
-    <span>🌙 ماه کجاست؟</span>
-    <span class="footer-dot">•</span>
-    <span>وضعیت ماه در روزهای پیش رو</span>
-  </footer>
+  <div class="res-wrap">
+    <button class="res-btn" title="منابع">✦</button>
+    <div class="res-pop">
+      <a href="https://www.astro-seek.com" target="_blank" rel="noopener">
+        <span class="ic">🪐</span> Astro-Seek <small>سایت اصلی</small>
+      </a>
+      <a href="https://www.astrotheme.com/transits_ephemerides_chart.php" target="_blank" rel="noopener">
+        <span class="ic">🌌</span> Astrotheme <small>نمایش خوشگل</small>
+      </a>
+    </div>
+  </div>
 
-  <script type="module" src="render.js"></script>
+  <section class="timeline"><div class="timeline-track" id="track"></div></section>
+</main>
 
+<script type="module" src="app.js"></script>
 </body>
 </html>
