@@ -39,4 +39,5 @@ function router() {
 }
 window.addEventListener("hashchange", router);
 router();  
-    
+
+export { broj, getData };
