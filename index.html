@@ -3,25 +3,52 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta
+    name="description"
+    content="وضعیت ماه و برج آن را برای روزهای پیش رو مشاهده کنید."
+  >
+
   <title>ماه کجاست؟</title>
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌙</text></svg>">
-  <link href="https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/Vazirmatn-font-face.css" rel="stylesheet">
+
+  <link
+    rel="icon"
+    href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌙</text></svg>"
+  >
+
+  <link
+    href="https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/Vazirmatn-font-face.css"
+    rel="stylesheet"
+  >
+
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
   <header class="site-header">
-    <a class="brand" href="./">🌙 ماه کجاست؟</a>
-    <nav>
+    <a class="brand" href="#/">
+      <span class="brand-icon">☾</span>
+      <span>ماه کجاست؟</span>
+    </a>
+
+    <nav class="site-nav">
       <a href="old/">نسخه‌ی قدیم</a>
     </nav>
   </header>
 
-  <main>
+  <main id="app">
     <section id="main-card" class="main-card"></section>
     <section id="days-strip" class="days-strip"></section>
   </main>
 
+  <footer class="site-footer">
+    <span>🌙 ماه کجاست؟</span>
+    <span class="footer-dot">•</span>
+    <span>وضعیت ماه در روزهای پیش رو</span>
+  </footer>
+
   <script type="module" src="render.js"></script>
+
 </body>
 </html>
