@@ -1,19 +1,7 @@
 {
-  "generated_at": "2026-09-06T21:09:40.649Z",
+  "generated_at": "2026-09-09T09:04:35.146Z",
   "source": "astro-seek",
   "days": [
-    {
-      "date": "2026-09-07",
-      "date_fa": "16 شهریور 1405",
-      "weekday": "دوشنبه",
-      "sign": "Cancer"
-    },
-    {
-      "date": "2026-09-08",
-      "date_fa": "17 شهریور 1405",
-      "weekday": "سه‌شنبه",
-      "sign": "Leo"
-    },
     {
       "date": "2026-09-09",
       "date_fa": "18 شهریور 1405",
@@ -48,6 +36,18 @@
       "date": "2026-09-14",
       "date_fa": "23 شهریور 1405",
       "weekday": "دوشنبه",
+      "sign": "Scorpio"
+    },
+    {
+      "date": "2026-09-15",
+      "date_fa": "24 شهریور 1405",
+      "weekday": "سه‌شنبه",
+      "sign": "Scorpio"
+    },
+    {
+      "date": "2026-09-16",
+      "date_fa": "25 شهریور 1405",
+      "weekday": "چهارشنبه",
       "sign": "Scorpio"
     }
   ]
