@@ -1,18 +1,18 @@
 import { getData, broj } from "./app.js";
 
 const SIGNS = {
-  Aries:      { fa:"قوچ",    ar:"حمل",  en:"ARIES",       sym:"♈" },
-  Taurus:     { fa:"گاو",    ar:"ثور",  en:"TAURUS",      sym:"♉" },
-  Gemini:     { fa:"دوپیکر", ar:"جوزا", en:"GEMINI",      sym:"♊" },
-  Cancer:     { fa:"خرچنگ",  ar:"سرطان",en:"CANCER",      sym:"♋" },
-  Leo:        { fa:"شیر",    ar:"اسد",  en:"LEO",         sym:"♌" },
-  Virgo:      { fa:"خوشه",   ar:"سنبله",en:"VIRGO",       sym:"♍" },
+  Aries:      { fa:"حمل",    ar:"حمل",  en:"ARIES",       sym:"♈" },
+  Taurus:     { fa:"ثور",    ar:"ثور",  en:"TAURUS",      sym:"♉" },
+  Gemini:     { fa:"جوزا", ar:"جوزا", en:"GEMINI",      sym:"♊" },
+  Cancer:     { fa:"سرطان",  ar:"سرطان",en:"CANCER",      sym:"♋" },
+  Leo:        { fa:"اسد",    ar:"اسد",  en:"LEO",         sym:"♌" },
+  Virgo:      { fa:"سنبله",   ar:"سنبله",en:"VIRGO",       sym:"♍" },
   Libra:      { fa:"ترازو",  ar:"میزان",en:"LIBRA",       sym:"♎" },
   Scorpio:    { fa:"عقرب",   ar:"عقرب", en:"SCORPIO",     sym:"♏" },
-  Sagittarius:{ fa:"کمان",   ar:"قوس",  en:"SAGITTARIUS", sym:"♐" },
-  Capricorn:  { fa:"بزغاله", ar:"جدی",  en:"CAPRICORN",   sym:"♑" },
+  Sagittarius:{ fa:"قوسه",   ar:"قوس",  en:"SAGITTARIUS", sym:"♐" },
+  Capricorn:  { fa:"جدی", ar:"جدی",  en:"CAPRICORN",   sym:"♑" },
   Aquarius:   { fa:"دلو",    ar:"دلو",  en:"AQUARIUS",    sym:"♒" },
-  Pisces:     { fa:"ماهی",   ar:"حوت",  en:"PISCES",      sym:"♓" },
+  Pisces:     { fa:"حوت",   ar:"حوت",  en:"PISCES",      sym:"♓" },
 };
 const ELEMENT = {
   Aries:"fire", Taurus:"earth", Gemini:"air",
