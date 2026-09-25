@@ -1,54 +1,54 @@
 {
-  "generated_at": "2026-09-17T09:34:46.211Z",
+  "generated_at": "2026-09-25T09:43:58.539Z",
   "source": "astro-seek",
   "days": [
     {
-      "date": "2026-09-17",
-      "date_fa": "26 شهریور 1405",
-      "weekday": "پنجشنبه",
-      "sign": "Sagittarius"
-    },
-    {
-      "date": "2026-09-18",
-      "date_fa": "27 شهریور 1405",
+      "date": "2026-09-25",
+      "date_fa": "3 مهر 1405",
       "weekday": "جمعه",
-      "sign": "Sagittarius"
-    },
-    {
-      "date": "2026-09-19",
-      "date_fa": "28 شهریور 1405",
-      "weekday": "شنبه",
-      "sign": "Capricorn"
-    },
-    {
-      "date": "2026-09-20",
-      "date_fa": "29 شهریور 1405",
-      "weekday": "یکشنبه",
-      "sign": "Capricorn"
-    },
-    {
-      "date": "2026-09-21",
-      "date_fa": "30 شهریور 1405",
-      "weekday": "دوشنبه",
-      "sign": "Capricorn"
-    },
-    {
-      "date": "2026-09-22",
-      "date_fa": "31 شهریور 1405",
-      "weekday": "سه‌شنبه",
-      "sign": "Aquarius"
-    },
-    {
-      "date": "2026-09-23",
-      "date_fa": "1 مهر 1405",
-      "weekday": "چهارشنبه",
-      "sign": "Aquarius"
-    },
-    {
-      "date": "2026-09-24",
-      "date_fa": "2 مهر 1405",
-      "weekday": "پنجشنبه",
       "sign": "Pisces"
+    },
+    {
+      "date": "2026-09-26",
+      "date_fa": "4 مهر 1405",
+      "weekday": "شنبه",
+      "sign": "Pisces"
+    },
+    {
+      "date": "2026-09-27",
+      "date_fa": "5 مهر 1405",
+      "weekday": "یکشنبه",
+      "sign": "Aries"
+    },
+    {
+      "date": "2026-09-28",
+      "date_fa": "6 مهر 1405",
+      "weekday": "دوشنبه",
+      "sign": "Aries"
+    },
+    {
+      "date": "2026-09-29",
+      "date_fa": "7 مهر 1405",
+      "weekday": "سه‌شنبه",
+      "sign": "Taurus"
+    },
+    {
+      "date": "2026-09-30",
+      "date_fa": "8 مهر 1405",
+      "weekday": "چهارشنبه",
+      "sign": "Taurus"
+    },
+    {
+      "date": "2026-10-01",
+      "date_fa": "9 مهر 1405",
+      "weekday": "پنجشنبه",
+      "sign": "Gemini"
+    },
+    {
+      "date": "2026-10-02",
+      "date_fa": "10 مهر 1405",
+      "weekday": "جمعه",
+      "sign": "Gemini"
     }
   ]
 }
