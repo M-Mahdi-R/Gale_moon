@@ -1,54 +1,54 @@
 {
-  "generated_at": "2026-10-01T11:06:10.791Z",
+  "generated_at": "2026-10-09T11:27:22.545Z",
   "source": "astro-seek",
   "days": [
     {
-      "date": "2026-10-01",
-      "date_fa": "9 مهر 1405",
-      "weekday": "پنجشنبه",
-      "sign": "Gemini"
-    },
-    {
-      "date": "2026-10-02",
-      "date_fa": "10 مهر 1405",
+      "date": "2026-10-09",
+      "date_fa": "17 مهر 1405",
       "weekday": "جمعه",
-      "sign": "Gemini"
+      "sign": "Libra"
     },
     {
-      "date": "2026-10-03",
-      "date_fa": "11 مهر 1405",
+      "date": "2026-10-10",
+      "date_fa": "18 مهر 1405",
       "weekday": "شنبه",
-      "sign": "Cancer"
+      "sign": "Libra"
     },
     {
-      "date": "2026-10-04",
-      "date_fa": "12 مهر 1405",
+      "date": "2026-10-11",
+      "date_fa": "19 مهر 1405",
       "weekday": "یکشنبه",
-      "sign": "Cancer"
+      "sign": "Libra"
     },
     {
-      "date": "2026-10-05",
-      "date_fa": "13 مهر 1405",
+      "date": "2026-10-12",
+      "date_fa": "20 مهر 1405",
       "weekday": "دوشنبه",
-      "sign": "Leo"
+      "sign": "Scorpio"
     },
     {
-      "date": "2026-10-06",
-      "date_fa": "14 مهر 1405",
+      "date": "2026-10-13",
+      "date_fa": "21 مهر 1405",
       "weekday": "سه‌شنبه",
-      "sign": "Leo"
+      "sign": "Scorpio"
     },
     {
-      "date": "2026-10-07",
-      "date_fa": "15 مهر 1405",
+      "date": "2026-10-14",
+      "date_fa": "22 مهر 1405",
       "weekday": "چهارشنبه",
-      "sign": "Virgo"
+      "sign": "Sagittarius"
     },
     {
-      "date": "2026-10-08",
-      "date_fa": "16 مهر 1405",
+      "date": "2026-10-15",
+      "date_fa": "23 مهر 1405",
       "weekday": "پنجشنبه",
-      "sign": "Virgo"
+      "sign": "Sagittarius"
+    },
+    {
+      "date": "2026-10-16",
+      "date_fa": "24 مهر 1405",
+      "weekday": "جمعه",
+      "sign": "Sagittarius"
     }
   ]
 }
