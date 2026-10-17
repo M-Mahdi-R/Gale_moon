@@ -1,54 +1,54 @@
 {
-  "generated_at": "2026-10-09T11:27:22.545Z",
+  "generated_at": "2026-10-17T08:43:01.541Z",
   "source": "astro-seek",
   "days": [
     {
-      "date": "2026-10-09",
-      "date_fa": "17 مهر 1405",
-      "weekday": "جمعه",
-      "sign": "Libra"
-    },
-    {
-      "date": "2026-10-10",
-      "date_fa": "18 مهر 1405",
+      "date": "2026-10-17",
+      "date_fa": "25 مهر 1405",
       "weekday": "شنبه",
-      "sign": "Libra"
+      "sign": "Capricorn"
     },
     {
-      "date": "2026-10-11",
-      "date_fa": "19 مهر 1405",
+      "date": "2026-10-18",
+      "date_fa": "26 مهر 1405",
       "weekday": "یکشنبه",
-      "sign": "Libra"
+      "sign": "Capricorn"
     },
     {
-      "date": "2026-10-12",
-      "date_fa": "20 مهر 1405",
+      "date": "2026-10-19",
+      "date_fa": "27 مهر 1405",
       "weekday": "دوشنبه",
-      "sign": "Scorpio"
+      "sign": "Aquarius"
     },
     {
-      "date": "2026-10-13",
-      "date_fa": "21 مهر 1405",
+      "date": "2026-10-20",
+      "date_fa": "28 مهر 1405",
       "weekday": "سه‌شنبه",
-      "sign": "Scorpio"
+      "sign": "Aquarius"
     },
     {
-      "date": "2026-10-14",
-      "date_fa": "22 مهر 1405",
+      "date": "2026-10-21",
+      "date_fa": "29 مهر 1405",
       "weekday": "چهارشنبه",
-      "sign": "Sagittarius"
+      "sign": "Aquarius"
     },
     {
-      "date": "2026-10-15",
-      "date_fa": "23 مهر 1405",
+      "date": "2026-10-22",
+      "date_fa": "30 مهر 1405",
       "weekday": "پنجشنبه",
-      "sign": "Sagittarius"
+      "sign": "Pisces"
     },
     {
-      "date": "2026-10-16",
-      "date_fa": "24 مهر 1405",
+      "date": "2026-10-23",
+      "date_fa": "1 آبان 1405",
       "weekday": "جمعه",
-      "sign": "Sagittarius"
+      "sign": "Pisces"
+    },
+    {
+      "date": "2026-10-24",
+      "date_fa": "2 آبان 1405",
+      "weekday": "شنبه",
+      "sign": "Aries"
     }
   ]
 }
